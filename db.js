@@ -5,5 +5,8 @@ const pool = new Pool({
     host: "cnggc0f79t8c73a8clag-a.oregon-postgres.render.com",
     port: 5432,
     database: "inkar_finalweb",
+    ssl: {
+        rejectUnauthorized: false
+    }
 });
 module.exports = pool;
