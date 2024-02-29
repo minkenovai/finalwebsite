@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User page</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="nav">
+            <div class="logo">
+                <h1 class="logo_name">Post</h1>
+            </div>
+            <div class="nav-menu">
+                <a href="" id="profileLink">Profile</a>
+                <a href="/post/posts" id="postLink">Posts</a>
+                <a href="" id="currencyLink">API</a>
+            </div>
+            <div class="user-profile">
+                <a href="" class="profile" id="profileName"><span id="usernameDisplay"></span></a>
+                <a class="logout-btn" href="/logout" onclick="logout()">signout</a>
+            </div>
+        </nav>
+        <div id="content" class="content"></div>
+        <div id="add-content" class="add-content"></div>
+        <div class="modal-body" id="followersContainer">
+            <div class="modal-header">
+                <h2>Followers</h2>
+                <a class="close-btn">Close</a>
+            </div>
+            <div id="followersList"></div>
+        </div>
+        <div class="modal-body" id="subscribersContainer">
+            <div class="modal-header">
+                <h2>Subscribers</h2>
+                <a class="close-btn">Close</a>
+            </div>
+            <div id="subscribersList"></div>
+        </div>
+
+        <div class="modal-body" id="allusersContainer">
+            <div class="modal-header">
+                <h2>All users</h2>
+                <a class="close-btn">Close</a>
+            </div>
+            <div id="allusersList"></div>
+        </div>
+
+        <div class="modal-body" id="addPostContainer">
+            <div class="modal-header">
+                <h2>Add post</h2>
+                <a class="close-btn">Close</a>
+            </div>
+            <div class="modal-input">
+                <input type="text" class="modal-inputs" id="newTitle" placeholder="Enter new title">
+                <textarea rows="8" class="modal-inputs" id="newDescription" placeholder="Enter new description"></textarea>
+            </div>
+            <button class="modal-button" id="addNewPost">Add</button>
+        </div>
+        <div class="modal-body" id="accSettingContainer">
+            <div class="modal-header">
+                <h2>Update user information</h2>
+                <a class="close-btn">Close</a>
+            </div>
+            <div class="modal-input">
+                <input type="text" class="modal-inputs" id="username" placeholder="Enter new username">
+                <input type="email" class="modal-inputs" id="email" placeholder="Enter new email">
+                <input type="password" class="modal-inputs" id="password" placeholder="Enter new password">
+            </div>
+            <button class="modal-button" id="updateUser">Update</button>
+        </div>
+        <div><p id="result"></p></div>
+        <div class="famous_quote_ctn"> 
+            <p id="quote"></p> 
+            <p id="author"></p> 
+        </div>
+    </div>
+    <script src="/js/user.js"></script>
+</body>
+</html>

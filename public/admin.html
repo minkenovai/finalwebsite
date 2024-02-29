@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User page</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="nav">
+            <div class="logo">
+                <h1 class="logo_name">Post</h1>
+            </div>
+            <div class="nav-menu">
+                <a href="" id="postLink">Posts</a>
+                <a href="" id="userLink" onclick="loadUsers(event)">Users</a>
+            </div>
+            <div class="user-profile">
+                <a href="/profile" class="profile" id="profileName"><span id="usernameDisplay"></span></a>
+                <a class="logout-btn" href="/logout">signout</a>
+            </div>
+        </nav>
+        <div id="content" class="content"></div>
+    </div>
+    <script src="/js/admin.js"></script>
+</body>
+</html>

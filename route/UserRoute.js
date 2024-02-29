@@ -1,0 +1,15 @@
+const Route = require('express')
+const route = new Route()
+const UserController = require('../controller/UserController')
+
+route.get('/profile', UserController.getUser)
+route.get('/user/:id', UserController.getUserById)
+route.get('/username', UserController.getUser)
+route.post('/register', UserController.register)
+route.post('/login', UserController.login)
+route.get('/users', UserController.getUsers)
+route.put('/users/:id', UserController.updateUser)
+route.delete('/users/:id', UserController.deleteUser)
+route.put('/user/update', UserController.updateUserInfo)
+route.get('/users/all', UserController.getUsersExceptMe)
+module.exports = route
